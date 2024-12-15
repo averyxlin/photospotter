@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:background="@drawable/rounded_corners_background">
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+            <ImageView
+                    android:id="@+id/backButtonImageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/baseline_arrow_back_24"/>
+
+            <TextView
+                    android:id="@+id/createPinText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Create a Pin"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:layout_below="@id/backButtonImageView"/>
+
+            <TextView
+                    android:id="@+id/addPhotosText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add up to 4 photos"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_below="@id/createPinText"/>
+
+            <GridLayout
+                    android:id="@+id/gridLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addPhotosText"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="2"
+                    android:rowCount="2"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_centerHorizontal="true">
+
+                <ImageView
+                        android:id="@+id/addImageView1"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:background="@drawable/dotted_box"
+                        android:src="@drawable/baseline_add_box_24"
+                        android:scaleType="centerInside"
+                        android:layout_margin="4dp"/>
+
+                <ImageView
+                        android:id="@+id/addImageView2"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:background="@drawable/dotted_box"
+                        android:src="@drawable/baseline_add_box_24"
+                        android:scaleType="centerInside"
+                        android:layout_margin="4dp"/>
+
+                <ImageView
+                        android:id="@+id/addImageView3"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:background="@drawable/dotted_box"
+                        android:src="@drawable/baseline_add_box_24"
+                        android:scaleType="centerInside"
+                        android:layout_margin="4dp"/>
+
+                <ImageView
+                        android:id="@+id/addImageView4"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:background="@drawable/dotted_box"
+                        android:src="@drawable/baseline_add_box_24"
+                        android:scaleType="centerInside"
+                        android:layout_margin="4dp"/>
+
+            </GridLayout>
+
+            <TextView
+                    android:id="@+id/minErrorMessageTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Must upload at least one image"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/red"
+                    android:layout_below="@id/gridLayout"
+                    android:visibility="gone" />
+
+
+            <TextView
+                    android:id="@+id/maxErrorMessageTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maximum 4 images allowed"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/red"
+                    android:layout_below="@id/minErrorMessageTextView"
+                    android:visibility="gone" />
+
+            <!-- Name Field -->
+            <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_below="@id/maxErrorMessageTextView"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/titleTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_below="@id/titleText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/titleEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Title for your pin"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Caption Field -->
+            <TextView
+                    android:id="@+id/captionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caption"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_below="@id/titleTextInputLayout"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/captionTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_below="@id/captionText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/captionEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Write a caption to describe your pin"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:inputType="textMultiLine"
+                        android:gravity="top" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Tags Fields -->
+            <TextView
+                    android:id="@+id/tagsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tags"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_below="@id/captionTextInputLayout"/>
+
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:id="@+id/tagsTextInputLayout"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="60dp"-->
+<!--                    android:layout_marginBottom="16dp"-->
+<!--                    android:layout_below="@id/tagsText">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/tagsEditText"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="Add tags to describe the vibes"-->
+<!--                        android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
+<!--                        android:layout_below="@id/tagsTextInputLayout"/>-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+            <HorizontalScrollView
+                    android:id="@+id/tagScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tagsText">
+                <LinearLayout
+                        android:id="@+id/tagsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal">
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Address Fields -->
+            <TextView
+                    android:id="@+id/addressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_below="@+id/tagScrollView"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addressTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_below="@id/addressText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addressEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Address"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:layout_below="@id/addressTextInputLayout"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Longitude EditText -->
+            <TextView
+                    android:id="@+id/longitudeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Longitude"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_below="@id/addressTextInputLayout"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/longitudeTextInputLayout"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_below="@id/longitudeText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/longitudeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="X"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:layout_below="@id/tagsTextInputLayout"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Latitude EditText -->
+            <TextView
+                    android:id="@+id/latitudeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Latitude"
+                    android:layout_marginLeft="20dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_toRightOf="@id/longitudeTextInputLayout"
+                    android:layout_below="@id/addressTextInputLayout"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/latitudeTextInputLayout"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/longitudeTextInputLayout"
+                    android:layout_below="@id/latitudeText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/latitudeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Y"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:layout_toRightOf="@id/longitudeTextInputLayout"
+                        android:layout_below="@id/latitudeTextInputLayout"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Create button -->
+            <Button
+                    android:id="@+id/buttonSaveChanges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create"
+                    android:layout_weight="1"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@+id/latitudeTextInputLayout"
+                    android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

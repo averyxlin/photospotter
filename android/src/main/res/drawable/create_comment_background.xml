@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white" />
+            <corners android:topLeftRadius="0dp"
+                     android:topRightRadius="0dp"
+                     android:bottomLeftRadius="16dp"
+                     android:bottomRightRadius="16dp"/>
+        </shape>
+    </item>
+
+    <!-- Stroke only on the top side -->
+    <item android:top="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                    android:width="0.1dp"
+                    android:color="@color/light_grey" /> <!-- Define light_grey color in your colors.xml -->
+        </shape>
+    </item>
+</layer-list>

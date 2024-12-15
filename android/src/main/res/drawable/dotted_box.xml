@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+    <solid android:color="@android:color/transparent" />
+    <stroke
+            android:color="@color/light_grey"
+            android:width="2dp"
+            android:dashWidth="8dp"
+            android:dashGap="4dp"/>
+    <corners android:radius="8dp" />
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_add_box_24" />
+</shape>

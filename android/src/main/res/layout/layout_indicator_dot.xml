@@ -1,0 +1,10 @@
+<!-- layout_indicator_dot.xml -->
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+           android:id="@+id/indicatorDot"
+           android:layout_width="10dp"
+           android:layout_height="10dp"
+           android:layout_margin="5dp"
+           android:src="@drawable/indicator_dot"
+           android:layout_gravity="center"
+           android:adjustViewBounds="true"
+           android:scaleType="fitCenter"/>

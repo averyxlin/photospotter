@@ -1,0 +1,64 @@
+# Gradle files
+.gradle/
+build/
+*.iml
+
+# IntelliJ IDEA files
+.idea/
+
+# Local configuration file
+local.properties
+
+# Generated files
+build/
+captures/
+*/bin/
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+
+# Android Studio generated files
+*.apk
+*.ap_
+
+# Android Studio IDE settings
+*.ipr
+*.iws
+
+# Android Studio workspaces
+*.swp
+*~/.sw?
+
+# Gradle wrapper files
+gradle-wrapper.jar
+gradle-wrapper.properties
+
+# Generated Gradle files
+.gradle/
+gradle/
+
+# Local configuration file (if not using the default Gradle wrapper)
+!gradle/wrapper/gradle-wrapper.properties
+
+# Log files
+*.log
+
+# Mac OS files
+.DS_Store
+
+server/uploads/*
+
+secrets.properties
+
+local.defaults.properties
+
+# Existing secrets
+secrets.properties
+local.defaults.properties
+
+# Google service account keys
+**/cs346-photospotter-f963641cf0c7.json
+**/android/google-services.json

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:padding="16dp"
+                android:background="@color/white">
+
+    <FrameLayout
+            android:id="@+id/loadingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+        <ProgressBar
+                android:id="@+id/loadingProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:visibility="invisible"/>
+
+    </FrameLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp" android:layout_marginStart="15dp" android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp">
+
+        <TextView
+                android:id="@+id/textViewLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textColor="#FF0000"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <TextView
+                android:id="@+id/createPinText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Edit Profile"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/addImageViewCard"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/createPinText"
+                app:cardCornerRadius="50dp">
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+
+                <!-- bioPhoto ImageView -->
+                <ImageView
+                        android:id="@+id/profileImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"/>
+
+                <!-- Edit icon ImageView -->
+                <ImageView
+                        android:id="@+id/editIcon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/baseline_edit_24"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:visibility="visible"/>
+            </FrameLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Name Field -->
+        <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_below="@id/addImageViewCard"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/titleTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@id/titleText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/titleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Bio Field -->
+        <TextView
+                android:id="@+id/captionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bio"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_below="@id/titleTextInputLayout"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/captionTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@id/captionText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/captionEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Bio"
+                    android:inputType="textMultiLine"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Links Fields -->
+        <!--        <TextView-->
+        <!--                android:id="@+id/tagsText"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="Links"-->
+        <!--                android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+        <!--                android:layout_below="@id/captionTextInputLayout"/>-->
+
+        <!--        &lt;!&ndash; Instagram Link EditText &ndash;&gt;-->
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--                android:id="@+id/tagsTextInputLayout"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_marginBottom="10dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:hint="Instagram"-->
+        <!--                android:layout_below="@id/tagsText">-->
+
+        <!--            <com.google.android.material.textfield.TextInputEditText-->
+        <!--                    android:id="@+id/tagsEditText"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_below="@id/tagsTextInputLayout"/>-->
+
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <!--        &lt;!&ndash; Site Link EditText &ndash;&gt;-->
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--                android:id="@+id/textInputLayoutSite"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:hint="Site"-->
+        <!--                android:layout_marginBottom="16dp"-->
+        <!--                android:layout_below="@id/tagsTextInputLayout">-->
+
+        <!--            <com.google.android.material.textfield.TextInputEditText-->
+        <!--                    android:id="@+id/editTextSite"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"/>-->
+
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/captionTextInputLayout">
+
+            <!-- Button to Cancel Changes -->
+            <Button
+                    android:id="@+id/buttonCancelChanges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="#808080"/>
+
+            <!-- Button to Save Changes -->
+            <Button
+                    android:id="@+id/buttonSaveChanges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
